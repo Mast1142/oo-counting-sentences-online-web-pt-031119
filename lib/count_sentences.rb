@@ -27,7 +27,6 @@ class String
   end
 
   def count_sentences
-    self.scan(/\w+[.?!]/)
-    self.count
+    self.scan(/\w+[.?!]/).count
   end
 end
