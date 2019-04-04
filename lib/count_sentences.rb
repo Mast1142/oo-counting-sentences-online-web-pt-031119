@@ -27,15 +27,7 @@ class String
   end
 
   def count_sentences
-    sentence = []
-    sentence << self.split(".")
-    sentence << self.split("?")
-    sentence << self.split("!")
-    sentence.reject(&:empty?)
-    if sentence.count == nil.to_i
-      nil.to_i
-    else
-      return sentence.count
+    self.scan(/\w+[.?!]/)
     end
   end
 end
